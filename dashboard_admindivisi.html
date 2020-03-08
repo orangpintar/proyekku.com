@@ -48,8 +48,8 @@
 			fill: tomato;
 		}
 	</style>
-	<link rel="stylesheet" href="dist/frappe-gantt.css" />
-	<script src="dist/frappe-gantt.js"></script>
+	<link rel="stylesheet" href="assets/css/frappe-gantt.css" />
+	<script src="assets/js/frappe-gantt.js"></script>
 </head>
 
 <body>
@@ -499,70 +499,59 @@
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-xl-8">
-          <div class="card">
-            <div class="card-header border-0">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h3 class="mb-0">Page visits</h3>
-                </div>
-                <div class="col text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <!-- gantt chart -->
-      <div class="container">
-        <h2>Interactive Gantt Chart entirely made in SVG!</h2>
-        <div class="gantt-target"></div>
-      </div>
-        <script>
-        var tasks = [
-        {
-				start: '2018-10-01',
-				end: '2018-10-08',
-				name: 'Redesign website',
-				id: "Task 0",
-				progress: 20
-			},
-			{
-				start: '2018-10-03',
-				end: '2018-10-06',
-				name: 'Write new content',
-				id: "Task 1",
-				progress: 5,
-				dependencies: 'Task 0'
-			},
-			{
-				start: '2018-10-04',
-				end: '2018-10-08',
-				name: 'Apply new styles',
-				id: "Task 2",
-				progress: 10,
-				dependencies: 'Task 1'
-			}
-        ]    
-        var gantt_chart = new Gantt(".gantt-target",tasks,{
-          on_click: function (task){
-            console.log(task);
-          },
-          on_date_change: function(task, start, end) {
-				  console.log(task, start, end);
-		    	},
-			    on_progress_change: function(task, progress) {
-				  console.log(task, progress);
-			    },
-			    on_view_change: function(mode) {
-				  console.log(mode);
-			    },
-			    view_mode: 'Month',
-			    language: 'en'
-		      });
-		      console.log(gantt_chart);
-          </script> 
 
+          <div class="container">
+            <h2>Interactive Gantt Chart entirely made in SVG!</h2>
+            <div class="gantt-target"></div>
+          </div>
+            <script>
+            var tasks = [
+            {
+            start: '2018-10-01',
+            end: '2018-10-08',
+            name: 'Redesign website',
+            id: "Task 0",
+            progress: 20
+          },
+          {
+            start: '2018-10-03',
+            end: '2018-10-06',
+            name: 'Write new content',
+            id: "Task 1",
+            progress: 5,
+            dependencies: 'Task 0'
+          },
+          {
+            start: '2018-10-04',
+            end: '2018-10-08',
+            name: 'Apply new styles',
+            id: "Task 2",
+            progress: 10,
+            dependencies: 'Task 1'
+          }
+            ]    
+            var gantt_chart = new Gantt(".gantt-target",tasks,{
+              on_click: function (task){
+                console.log(task);
+              },
+              on_date_change: function(task, start, end) {
+              console.log(task, start, end);
+              },
+              on_progress_change: function(task, progress) {
+              console.log(task, progress);
+              },
+              on_view_change: function(mode) {
+              console.log(mode);
+              },
+              view_mode: 'Month',
+              language: 'en'
+              });
+              console.log(gantt_chart);
+              </script> -->
+        </div>
 
         <div class="col-xl-4">
           <div class="card">
@@ -682,6 +671,28 @@
             </div>
           </div>
         </div>
+
+      </div>
+      
+
+      <!--task complete-->
+      <div class="progress-wrapper">
+        <div class="progress-info">
+          <div class="progress-label">
+            <span>Task completed</span>
+          </div>
+          <div class="progress-percentage">
+            <span>60%</span>
+          </div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-default" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+        </div>
+      </div> 
+      <br>
+      <br>
+      
+        
       </div>
       <!-- Footer -->
       <footer class="footer pt-0">
