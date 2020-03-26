@@ -32,24 +32,6 @@
   <!-- Page plugins -->
   <!-- Argon CSS -->
   <link rel="stylesheet" href="assets/css/argon.css?v=1.2.0" type="text/css">
-
-  <!-- gantt frape-->
-  <style>
-		body {
-			font-family: sans-serif;
-			background: #ccc;
-		}
-		.container {
-			width: 80%;
-			margin: 0 auto;
-		}
-		/* custom class */
-		.gantt .bar-milestone .bar {
-			fill: tomato;
-		}
-	</style>
-	<link rel="stylesheet" href="assets/css/frappe-gantt.css" />
-	<script src="assets/js/frappe-gantt.js"></script>
 </head>
 
 <body>
@@ -59,7 +41,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          Proyekku.com
+          <h1 class="display-4">Proyekku.com</h1>
         </a>
       </div>
       <div class="navbar-inner">
@@ -67,6 +49,9 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
+            <select class="form-control">
+              <option>Pilihan proyek</option>
+            </select>
             <li class="nav-item">
               <a class="nav-link active" href="divisi_dashboard.html">
                 <i class="ni ni-tv-2 text-primary"></i>
@@ -75,8 +60,8 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="divisi_jobcard.html">
-                <i class="ni ni-badge text-blue"></i>
-                <span class="nav-link-text">Jobcard</span>
+                <i class="ni ni-single-02 text-blue"></i>
+                <span class="nav-link-text">Progress detail</span>
               </a>
             </li>
             <li class="nav-item">
@@ -86,11 +71,97 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pt_diskusi.html">
+              <a class="nav-link" href="divisi_diskusi.html">
                 <i class="ni ni-chat-round text-blue"></i>
                 <span class="nav-link-text">Diskusi</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="divisi_laporan.html">
+                <i class="ni ni-folder-17 text-blue"></i>
+                <span class="nav-link-text">Laporan</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="divisi_issue.html">
+                <i class="ni ni-sound-wave text-blue"></i>
+                <span class="nav-link-text">Issues</span>
+              </a>
+            </li>
+          </ul>
+          <!-- tombol tambah proyek-->
+            <div class="col-md-12">
+              <button type="button" class="btn btn-icon btn-primary" data-toggle="modal" data-target="#modal-form">
+                <span class="btn-inner--icon"><i class="ni ni-fat-add"></i></span>
+                Tambah proyek
+              </button>
+        <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+            <div class="modal-dialog modal- modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">  
+                    <div class="modal-body p-10">          
+            <div class="card bg-secondary border-4 mb-4">
+            <div class="card-header bg-transparent pb-2">
+              <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
+            </div>
+            <div class="card-body px-lg-14 py-lg-14">
+                <div class="text-center text-muted mb-10">
+                    <small>Or sign in with credentials</small>
+                </div>
+                <form>
+                  <div class="form-group">
+                    <label for="example-text-input" class="form-control-label">Text</label>
+                    <input class="form-control" type="text" placeholder="John Snow" id="example-text-input">
+                  </div>
+                  <div class="form-group">
+                    <label for="example-search-input" class="form-control-label">Search</label>
+                    <input class="form-control" type="search" placeholder="Tell me your secret ..." id="example-search-input">
+                  </div>
+                  <div>
+                    <label for="example-email-input" class="form-control-label">Email</label>
+			<input class="form-control" type="email" placeholder="argon@example.com" id="example-email-input">
+                  </div>
+                  <div class="form-group">
+                      <label for="example-tel-input" class="form-control-label">Phone</label>
+                      <input class="form-control" type="tel" placeholder="40-(770)-888-444" id="example-tel-input">
+                  </div>
+                  <div class="form-group">
+                      <label for="example-datetime-local-input" class="form-control-label">Datetime</label>
+                      <input class="form-control" type="datetime-local" placeholder="2018-11-23T10:30:00" id="example-datetime-local-input">
+                  </div>
+                  <div class="form-group">
+                      <label for="example-date-input" class="form-control-label">Date</label>
+                      <input class="form-control" type="date" placeholder="2018-11-23" id="example-date-input">
+                  </div>
+                  <div class="form-group">
+                      <label for="example-month-input" class="form-control-label">Month</label>
+                      <input class="form-control" type="month" placeholder="2018-11" id="example-month-input">
+                  </div>
+                  <div class="form-group">
+                      <label for="example-week-input" class="form-control-label">Week</label>
+                      <input class="form-control" type="week" placeholder="2018-W23" id="example-week-input">
+                  </div>
+                  
+                    <div class="custom-control custom-control-alternative custom-checkbox">
+                        <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
+                        <label class="custom-control-label" for=" customCheckLogin">
+                            <span class="text-muted">Remember me</span>
+                        </label>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary my-4">Sign in</button>
+                    </div>
+                </form>
+            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          </div>
+        </div> 
+
           </ul>
         </div>
       </div>
@@ -506,58 +577,21 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-xl-8">
-
-          <div class="container">
-            <h2>Interactive Gantt Chart entirely made in SVG!</h2>
-            <div class="gantt-target"></div>
+      <div class="progress-wrapper">
+        <div class="progress-info">
+          <div class="progress-label">
+            <span>Task completed</span>
           </div>
-            <script>
-            var tasks = [
-            {
-            start: '2018-10-01',
-            end: '2018-10-08',
-            name: 'Redesign website',
-            id: "Task 0",
-            progress: 20
-          },
-          {
-            start: '2018-10-03',
-            end: '2018-10-06',
-            name: 'Write new content',
-            id: "Task 1",
-            progress: 5,
-            dependencies: 'Task 0'
-          },
-          {
-            start: '2018-10-04',
-            end: '2018-10-08',
-            name: 'Apply new styles',
-            id: "Task 2",
-            progress: 10,
-            dependencies: 'Task 1'
-          }
-            ]    
-            var gantt_chart = new Gantt(".gantt-target",tasks,{
-              on_click: function (task){
-                console.log(task);
-              },
-              on_date_change: function(task, start, end) {
-              console.log(task, start, end);
-              },
-              on_progress_change: function(task, progress) {
-              console.log(task, progress);
-              },
-              on_view_change: function(mode) {
-              console.log(mode);
-              },
-              view_mode: 'Month',
-              language: 'en'
-              });
-              console.log(gantt_chart);
-              </script> -->
+          <div class="progress-percentage">
+            <span>60%</span>
+          </div>
         </div>
+        <div class="progress">
+          <div class="progress-bar bg-default" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+        </div>
+      </div> 
+      <br>
+      <br>
 
         <div class="col-xl-4">
           <div class="card">
@@ -677,28 +711,6 @@
             </div>
           </div>
         </div>
-
-      </div>
-      
-
-      <!--task complete-->
-      <div class="progress-wrapper">
-        <div class="progress-info">
-          <div class="progress-label">
-            <span>Task completed</span>
-          </div>
-          <div class="progress-percentage">
-            <span>60%</span>
-          </div>
-        </div>
-        <div class="progress">
-          <div class="progress-bar bg-default" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-        </div>
-      </div> 
-      <br>
-      <br>
-      
-        
       </div>
       <!-- Footer -->
       <footer class="footer pt-0">
